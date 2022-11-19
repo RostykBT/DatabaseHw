@@ -426,6 +426,13 @@ void rating(PGconn *conn)
 
 void print_help()
 {
+    //clear terminal
+    printf("\033[2J\033[1;1H");
+    printf("This program is a student database management system.\n");
+    printf("It allows you to add, delete, update and list students, courses and grades.\n");
+    printf("You can also list students with average grade >= user input.\n");
+    //print hr
+    printf("------------------------------------------------------------\n");
     printf("'add' - add student, course or grade to database \n");
     printf("'delete' - delete student or course from database \n");
     printf("'modify' - modify student or course from database \n");
@@ -437,7 +444,7 @@ void print_help()
 void list(PGconn *conn)
 {
     char input_storcs[100];
-    printf("type 'student' or 'course': ");
+    printf("type 'student', 'course' or 'grade': ");
     scanf("%s", input_storcs);
     if (strcmp(input_storcs, "student") == 0)
     {

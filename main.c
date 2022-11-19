@@ -21,6 +21,9 @@ int main()
         return 0;
     }
 
+    // Print help
+    print_help();
+
     while (1)
     {
         char input[100];
