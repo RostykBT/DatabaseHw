@@ -19,7 +19,7 @@ void add_user(PGconn *conn)
     if (PQresultStatus(res) != PGRES_COMMAND_OK)
     {
         printf("We did not add the student\n");
-        printf("%s", PQerrorMessage(conn));
+        // printf("%s", PQerrorMessage(conn));
 
         PQclear(res);
         // continue;
@@ -116,7 +116,7 @@ void add_course(PGconn *conn)
     if (PQresultStatus(res) != PGRES_COMMAND_OK)
     {
         printf("We did not add the course\n");
-        printf("%s", PQerrorMessage(conn));
+        // printf("%s", PQerrorMessage(conn));
 
         PQclear(res);
         // continue;
@@ -137,7 +137,7 @@ void delete_student(PGconn *conn)
     if (PQresultStatus(res) != PGRES_COMMAND_OK)
     {
         printf("We did not delete the student\n");
-        printf("%s", PQerrorMessage(conn));
+        // printf("%s", PQerrorMessage(conn));
 
         PQclear(res);
         // continue;
@@ -169,7 +169,7 @@ void modify_student(PGconn *conn)
         PGresult *res = PQexec(conn, query);
         if (PQresultStatus(res) != PGRES_COMMAND_OK)
         {
-            printf("Error: %s", PQerrorMessage(conn));
+            //printf("Error: %s", PQerrorMessage(conn));
         }
         PQclear(res);
     }
@@ -185,7 +185,7 @@ void modify_student(PGconn *conn)
         PGresult *res = PQexec(conn, query);
         if (PQresultStatus(res) != PGRES_COMMAND_OK)
         {
-            printf("Error: %s", PQerrorMessage(conn));
+            //printf("Error: %s", PQerrorMessage(conn));
         }
         PQclear(res);
     }
@@ -199,7 +199,7 @@ void modify_student(PGconn *conn)
         PGresult *res = PQexec(conn, query);
         if (PQresultStatus(res) != PGRES_COMMAND_OK)
         {
-            printf("Error: %s", PQerrorMessage(conn));
+            //printf("Error: %s", PQerrorMessage(conn));
         }
         PQclear(res);
     }
@@ -232,7 +232,7 @@ void modify_course(PGconn *conn)
         PGresult *res = PQexec(conn, query);
         if (PQresultStatus(res) != PGRES_COMMAND_OK)
         {
-            printf("Error: %s", PQerrorMessage(conn));
+           // printf("Error: %s", PQerrorMessage(conn));
             PQclear(res);
         }
         else
@@ -252,7 +252,7 @@ void modify_course(PGconn *conn)
         PGresult *res = PQexec(conn, query);
         if (PQresultStatus(res) != PGRES_COMMAND_OK)
         {
-            printf("Error: %s", PQerrorMessage(conn));
+            //printf("Error: %s", PQerrorMessage(conn));
             PQclear(res);
         }
         else
@@ -272,7 +272,7 @@ void modify_course(PGconn *conn)
         PGresult *res = PQexec(conn, query);
         if (PQresultStatus(res) != PGRES_COMMAND_OK)
         {
-            printf("Error: %s", PQerrorMessage(conn));
+            //printf("Error: %s", PQerrorMessage(conn));
             PQclear(res);
         }
         else
@@ -292,7 +292,7 @@ void modify_course(PGconn *conn)
         PGresult *res = PQexec(conn, query);
         if (PQresultStatus(res) != PGRES_COMMAND_OK)
         {
-            printf("Error: %s", PQerrorMessage(conn));
+           // printf("Error: %s", PQerrorMessage(conn));
             PQclear(res);
         }
         else
@@ -374,7 +374,7 @@ void add_grade(PGconn *conn)
     {
         printf("Error adding grade\n");
         // print error
-        printf("%s", PQerrorMessage(conn));
+        // printf("%s", PQerrorMessage(conn));
         PQclear(res);
         return;
     }
