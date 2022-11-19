@@ -64,7 +64,7 @@ Student added.
 C:\HomeWork\DB>
 ```
 
-File sturcure:
+### File sturcure:
 ```
 1. main.c
     file contains main function, which is the entry point of the program. 
